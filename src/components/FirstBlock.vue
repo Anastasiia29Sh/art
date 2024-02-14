@@ -15,7 +15,7 @@
       </p>
       <a href="#list-courses" class="btn-choose-course">Выбрать курс</a>
     </v-container>
-    <img src="/src/assets/girl.png" class="logo-girl" alt="" />
+    <!-- <img src="/src/assets/girl.png" class="logo-girl" alt="" /> -->
   </v-container>
 </template>
 
