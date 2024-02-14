@@ -45,9 +45,6 @@
         По окончании курсов Вы получите именной сертификат Школы косметологии и
         массажного дела Искусство Красоты!!!
       </p>
-      <img src="/src/assets/imgCourses/RkGDb-UYqy0.jpg" alt="" />
-      <img :src="img" alt="" />
-      <img src="/src/assets/lfk2.jpg" alt="" />
     </v-container>
   </v-container>
 </template>
@@ -55,13 +52,12 @@
 <script setup>
 import json from "../../courses.json";
 import { ref } from "vue";
-import { useRoute } from "vue-router";
 
-const img = ref("/src/assets/imgCourses/RkGDb-UYqy0.jpg");
+const props = defineProps(["idCourse"]);
 
-const route = useRoute();
+const idCourse = props.idCourse;
 
-const idCourse = Number(route.name);
+console.log(idCourse);
 
 const listCourses = json.data;
 const course = listCourses.filter((f) => f.id === idCourse)[0];

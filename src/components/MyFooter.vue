@@ -3,11 +3,13 @@
     <v-container fluid class="fon-content">
       <v-row justify="space-between" align="center">
         <v-col cols="auto">
-          <router-link class="logo" @click.native="scrollToTop" to="/">
-            <div class="logo">
-              <img src="@/assets/logo-art.png" alt="logo-art" />
-            </div>
-          </router-link>
+          <div
+            class="logo"
+            @click="$emit('goMain', -1)"
+            @click.native="scrollToTop"
+          >
+            <img src="@/assets/logo-art.png" alt="logo-art" />
+          </div>
         </v-col>
 
         <v-col cols="auto" class="contacts">
@@ -65,6 +67,7 @@ $secondaryColor2: #fff;
     .logo {
       max-width: 200px;
       text-align: center;
+      cursor: pointer;
       img {
         width: 100%;
       }

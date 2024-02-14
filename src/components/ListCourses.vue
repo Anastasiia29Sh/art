@@ -4,10 +4,10 @@
       <h3>Все программы обучения</h3>
       <div class="list-courses">
         <div v-for="el in showListCourses" :key="el.id">
-          <router-link
+          <div
             class="course"
+            @click="$emit('goCourse', el.id)"
             @click.native="scrollToTop"
-            :to="`course/${el.id}`"
           >
             <div class="course">
               <div class="course-info">
@@ -16,9 +16,9 @@
                 <p class="course-time">{{ el.time }}</p>
                 <p class="course-price">{{ el.price }} ₽</p>
               </div>
-              <a :href="`/course/${el.id}`">ПОДРОБНЕЕ</a>
+              <a @click="$emit('goCourse', el.id)">ПОДРОБНЕЕ</a>
             </div>
-          </router-link>
+          </div>
         </div>
       </div>
       <button type="button" @click="moreShow()" class="show-more">
@@ -127,6 +127,7 @@ $dopColor: #dfb561;
         min-height: 450px;
         text-decoration: none;
         color: #000;
+        cursor: pointer;
         h4 {
           padding: 10px;
           font-family: UKIJSls;
