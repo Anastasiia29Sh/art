@@ -47,7 +47,7 @@ import { _logFunc } from 'nodemailer/lib/shared';
         массажного дела Искусство Красоты!!!
       </p>
       <img src="/src/assets/imgCourses/RkGDb-UYqy0.jpg" alt="" />
-      <img src="@/assets/imgCourses/RkGDb-UYqy0.jpg" alt="" />
+      <img :src="img" alt="" />
       <img src="/src/assets/lfk2.jpg" alt="" />
     </v-container>
   </v-container>
@@ -57,6 +57,8 @@ import { _logFunc } from 'nodemailer/lib/shared';
 import json from "../../courses.json";
 import { ref } from "vue";
 import { useRoute } from "vue-router";
+
+const img = ref("/src/assets/imgCourses/RkGDb-UYqy0.jpg");
 
 const route = useRoute();
 
