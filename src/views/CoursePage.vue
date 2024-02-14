@@ -1,4 +1,3 @@
-import { _logFunc } from 'nodemailer/lib/shared';
 <template>
   <v-container fluid class="card-course">
     <img class="img-course" :src="imgCourse" :alt="course.name" />
@@ -62,7 +61,7 @@ const img = ref("/src/assets/imgCourses/RkGDb-UYqy0.jpg");
 
 const route = useRoute();
 
-const idCourse = Number(route.params.id);
+const idCourse = Number(route.name);
 
 const listCourses = json.data;
 const course = listCourses.filter((f) => f.id === idCourse)[0];

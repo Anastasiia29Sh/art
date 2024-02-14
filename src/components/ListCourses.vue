@@ -7,7 +7,7 @@
           <router-link
             class="course"
             @click.native="scrollToTop"
-            :to="{ name: 'course', params: { id: el.id } }"
+            :to="`course/${el.id}`"
           >
             <div class="course">
               <div class="course-info">
