@@ -12,13 +12,11 @@
             <div class="course">
               <div class="course-info">
                 <img :src="`src/assets/imgCourses/${el.image}`" alt="" />
-                <!-- <img src="@/assets/imgCourses/Q072auOq5hM.jpg" alt="" /> -->
-                <!-- <img :src="el.image" /> -->
                 <h4 class="course-title">{{ el.name }}</h4>
                 <p class="course-time">{{ el.time }}</p>
                 <p class="course-price">{{ el.price }} ₽</p>
               </div>
-              <a href="/beauty-art/course/1">ПОДРОБНЕЕ</a>
+              <a :href="`/course/${el.id}`">ПОДРОБНЕЕ</a>
             </div>
           </router-link>
         </div>

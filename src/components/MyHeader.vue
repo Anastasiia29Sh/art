@@ -3,7 +3,7 @@
     <v-container fluid class="fon-content">
       <v-row justify="space-between" align="center">
         <v-col cols="auto">
-          <router-link class="logo" to="/beauty-art">
+          <router-link class="logo" to="/">
             <div class="logo">
               <img src="@/assets/logo-art.png" alt="logo-art" />
             </div>

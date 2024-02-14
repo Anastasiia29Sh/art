@@ -2,12 +2,12 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
-        path: '/beauty-art',
+        path: '/',
         name: 'Home',
         component: () => import('@/views/MainPage.vue'),
       },
       {
-        path: '/beauty-art/course/:id',
+        path: '/course/:id',
         name: 'course',
         component: () => import('@/views/CoursePage.vue'),
       },
