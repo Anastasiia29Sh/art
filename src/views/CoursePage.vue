@@ -48,7 +48,7 @@ import { _logFunc } from 'nodemailer/lib/shared';
       </p>
       <img src="/src/assets/imgCourses/RkGDb-UYqy0.jpg" alt="" />
       <img src="@/assets/imgCourses/RkGDb-UYqy0.jpg" alt="" />
-      <img src="src/assets/lll.jpg" alt="" />
+      <img src="/src/assets/lfk2.jpg" alt="" />
     </v-container>
   </v-container>
 </template>
