@@ -69,9 +69,8 @@ const imgCourse = ref("");
 getImageCourse();
 
 function getImageCourse() {
-  if (windowSize <= 600)
-    imgCourse.value = "/src/assets/imgCourses/" + course.image;
-  else imgCourse.value = "/src/assets/imgCourses/" + course.dopImage;
+  if (windowSize <= 600) imgCourse.value = course.image;
+  else imgCourse.value = course.dopImage;
 }
 
 window.addEventListener("resize", function (event) {

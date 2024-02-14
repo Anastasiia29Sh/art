@@ -11,7 +11,7 @@
           >
             <div class="course">
               <div class="course-info">
-                <img :src="`src/assets/imgCourses/${el.image}`" alt="" />
+                <img :src="el.image" alt="" />
                 <h4 class="course-title">{{ el.name }}</h4>
                 <p class="course-time">{{ el.time }}</p>
                 <p class="course-price">{{ el.price }} ₽</p>
