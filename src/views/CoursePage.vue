@@ -46,6 +46,9 @@ import { _logFunc } from 'nodemailer/lib/shared';
         По окончании курсов Вы получите именной сертификат Школы косметологии и
         массажного дела Искусство Красоты!!!
       </p>
+      <img src="/src/assets/imgCourses/RkGDb-UYqy0.jpg" alt="" />
+      <img src="@/assets/imgCourses/RkGDb-UYqy0.jpg" alt="" />
+      <img src="src/assets/lll.jpg" alt="" />
     </v-container>
   </v-container>
 </template>
