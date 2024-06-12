@@ -75,7 +75,7 @@ const medEducation = course.medEducation ? "Обязательно" : "Не об
 const imgCourse = ref("");
 getImageCourse();
 
-const programFile = computed(() => `../../files/${course.program}`);
+const programFile = computed(() => `/files/${course.program}`);
 
 function getImageCourse() {
   if (windowSize <= 600) imgCourse.value = course.image;
