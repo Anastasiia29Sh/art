@@ -13,7 +13,7 @@
       </p>
       <div class="files">
         <v-icon icon="mdi-file" />
-        <a href="./files/marketing_cosmetology_program.pdf" download>
+        <a href="/files/marketing_cosmetology_program.pdf" download>
           Программа доказательный маркетинг в эстетической медицине и
           косметологии
         </a>
