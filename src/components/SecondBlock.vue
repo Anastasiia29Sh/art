@@ -11,6 +11,13 @@
         среду, где ты сможешь получить высококачественное образование и достичь
         своих профессиональных целей.
       </p>
+      <div class="files">
+        <v-icon icon="mdi-file" />
+        <a href="../../files/marketing_cosmetology_program.pdf" download>
+          Программа доказательный маркетинг в эстетической медицине и
+          косметологии
+        </a>
+      </div>
     </v-container>
   </v-container>
 </template>
@@ -47,6 +54,20 @@ $secondaryColor2: #fff;
     p {
       font-size: 22px;
     }
+    .files {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+      font-size: 22px;
+      color: $mainColor2;
+      cursor: pointer;
+      a {
+        color: $mainColor2;
+        &:hover {
+          color: $secondaryColor1;
+        }
+      }
+    }
   }
   // (<1200)
   @media screen and (max-width: $xl) {
@@ -55,7 +76,8 @@ $secondaryColor2: #fff;
       h3 {
         font-size: 30px;
       }
-      p {
+      p,
+      .files {
         font-size: 18px;
       }
     }
@@ -66,7 +88,8 @@ $secondaryColor2: #fff;
         h3 {
           font-size: 28px;
         }
-        p {
+        p,
+        .files {
           font-size: 16px;
         }
       }
@@ -92,7 +115,8 @@ $secondaryColor2: #fff;
               h3 {
                 font-size: 26px;
               }
-              p {
+              p,
+              .files {
                 font-size: 16px;
               }
             }

@@ -41,6 +41,13 @@
           </li>
         </ul>
       </div>
+      <div v-if="course.program" class="knowledge">
+        <h3>Программа курса:</h3>
+        <div class="files">
+          <v-icon icon="mdi-file" />
+          <a :href="programFile" download> Скачать файл </a>
+        </div>
+      </div>
       <p class="end-course">
         По окончании курсов Вы получите именной сертификат Школы косметологии и
         массажного дела Искусство Красоты!!!
@@ -51,7 +58,7 @@
 
 <script setup>
 import json from "../../courses.json";
-import { ref } from "vue";
+import { ref, computed } from "vue";
 
 const props = defineProps(["idCourse"]);
 
@@ -67,6 +74,8 @@ let windowSize = document.documentElement.clientWidth;
 const medEducation = course.medEducation ? "Обязательно" : "Не обязательно";
 const imgCourse = ref("");
 getImageCourse();
+
+const programFile = computed(() => `../../files/${course.program}`);
 
 function getImageCourse() {
   if (windowSize <= 600) imgCourse.value = course.image;
@@ -194,6 +203,18 @@ $secondaryColor2: #fff;
         left: 16%;
         background: url("/src/assets/icons/check-mark.svg") no-repeat;
         background-size: cover;
+      }
+    }
+    .files {
+      display: flex;
+      gap: 10px;
+      color: $mainColor2;
+      cursor: pointer;
+      a {
+        color: $mainColor1;
+        &:hover {
+          color: $mainColor2;
+        }
       }
     }
     .end-course {
