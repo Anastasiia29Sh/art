@@ -14,7 +14,7 @@
                 <img :src="el.image" alt="" />
                 <h4 class="course-title">{{ el.name }}</h4>
                 <p class="course-time">{{ el.time }}</p>
-                <p class="course-price">{{ el.price }} ₽</p>
+                <p v-if="el.price" class="course-price">{{ el.price }} ₽</p>
               </div>
               <a @click="$emit('goCourse', el.id)">ПОДРОБНЕЕ</a>
             </div>

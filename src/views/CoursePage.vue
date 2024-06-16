@@ -3,7 +3,7 @@
     <img class="img-course" :src="imgCourse" :alt="course.name" />
     <v-container fluid class="card-course-content">
       <h2>{{ course.name }}</h2>
-      <p>{{ course.price }} ₽</p>
+      <p v-if="course.price">{{ course.price }} ₽</p>
     </v-container>
   </v-container>
 
@@ -17,7 +17,7 @@
       <div>
         <img src="/src/assets/icons/time.png" alt="" />
         <span>Длительность курса</span>
-        <p>{{ course.time }}</p>
+        <p>{{ course.time || "-" }}</p>
       </div>
       <div class="certificate">
         <img src="/src/assets/icons/certificate.png" alt="" />
@@ -33,7 +33,7 @@
         <br v-if="description === ''" />
         {{ description }}
       </p>
-      <div class="knowledge">
+      <div v-if="knowledge" class="knowledge">
         <h3>На курсе Вы:</h3>
         <ul>
           <li v-for="(knowledge, i) in course.knowledge" :key="i">
